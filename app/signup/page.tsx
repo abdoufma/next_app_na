@@ -1,7 +1,6 @@
 "use client";
 import { CircularProgress } from "@mui/material";
 import Switch from "@mui/material/Switch";
-import { signIn,  } from "next-auth/react";
 import Link from "next/link";
 import {  useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
