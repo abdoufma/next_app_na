@@ -1,5 +1,12 @@
 import * as jose from 'jose';
-import { SignOptions } from 'jsonwebtoken';
+interface SignOptions {
+    expiresIn?: string | number;
+    /** expressed in seconds or a string describing a time span [zeit/ms](https://github.com/zeit/ms.js).  Eg: 60, "2 days", "10h", "7d" */
+    audience?: string | string[] | undefined;
+    subject?: string | undefined;
+    issuer?: string | undefined;
+    jwtid?: string | undefined;
+}
 
 const secret = process.env.AUTH_SECRET || '06b9ce5826da4a206c10b2621279a40da43411476f2cb1cb2a3a7952d630fab2';
 
